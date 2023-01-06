@@ -24,3 +24,7 @@ Use this command to run compose create the docker image :
  [Docker Engine (For ubuntu servers)](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 
 [Docker Desktop](https://docs.docker.com/desktop/)
+
+
+#If you are using Azure or VPS or VM provider make sure you allow port 5432 in networking so you can access postgres db in localmachine
+
