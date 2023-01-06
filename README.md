@@ -12,3 +12,15 @@ Change this to your desired postgress password
 Update this base on your postgres db password
 
 ```HASURA_GRAPHQL_METADATA_DATABASE_URL: postgres://postgres:admin@postgres:5432/postgres```
+
+
+Use this command to run compose create the docker image :
+
+ ```docker compose up -d```
+ 
+ 
+ Refference how to install docker:
+ 
+ [Docker Engine (For ubuntu servers)](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
+
+[Docker Desktop](https://docs.docker.com/desktop/)
