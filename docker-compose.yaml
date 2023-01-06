@@ -1,14 +1,13 @@
 version: '3.6'
 services:
   postgres:
-    image: postgres:15
+    image: postgres:13
     ports:
     - "5432:5432"
     restart: always
     volumes:
     - db_data:/var/lib/postgresql/data
     environment:
-      POSTGRES_USERNAME: admin
       POSTGRES_PASSWORD: admin
   graphql-engine:
     image: hasura/graphql-engine:v2.16.1
@@ -19,7 +18,7 @@ services:
     restart: always
     environment:
       ## postgres database to store Hasura metadata
-      HASURA_GRAPHQL_METADATA_DATABASE_URL: postgres://admin:admin@postgres:5432/postgres
+      HASURA_GRAPHQL_METADATA_DATABASE_URL: postgres://postgres:admin@postgres:5432/postgres
       ## this env var can be used to add the above postgres database to Hasura as a data source. this can be removed/updated based on your needs
       HASURA_GRAPHQL_ADMIN_SECRET: randomDdos1.com
       # PG_DATABASE_URL: postgres://postgres:postgrespassword@postgres:5432/postgres
